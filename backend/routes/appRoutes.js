@@ -1,5 +1,5 @@
-const express = require('express')
-
+const express = require('express');
+const Product = require('../models/productModel')
 const router = express.Router()
 
 // landing page
@@ -13,8 +13,15 @@ router.get('/:id', (req, res) => {
 })
 
 // Add an item to the shopping cart
-router.post('/', (req, res) => {
-    res.json({ mssg: 'Add an item to the cart' })
+router.post('/', async (req, res) => {
+    const { title, price, description, image } = req.body
+
+    try {
+        const product = await Product.create({ title, price, description, image })
+        res.status(200).json(product)
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
 })
 
 // Delete an item from the shopping cart
