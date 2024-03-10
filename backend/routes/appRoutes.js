@@ -1,40 +1,30 @@
 const express = require('express');
-const Product = require('../models/productModel')
-const router = express.Router()
+const {
+    getProducts,
+    getProduct,
+    addProduct,
+} = require('../controllers/productController')
 
-// landing page
-router.get('/', (req, res) => {
-    res.json({ mssg: 'Entering the landing page and get all items' })
-})
+const router = express.Router();
 
-// to get a single item
-router.get('/:id', (req, res) => {
-    res.json({ mssg: 'Selected item from the store' })
-})
+// to get all products
+router.get('/', getProducts)
 
-// Add an item to the shopping cart
-router.post('/', async (req, res) => {
-    const { title, price, description, image } = req.body
+// to get a single product
+router.get('/:id', getProduct)
 
-    try {
-        const product = await Product.create({ title, price, description, image })
-        res.status(200).json(product)
-    } catch (error) {
-        res.status(400).json({ error: error.message })
-    }
-})
+// to add a product into the shopping cart
+router.post('/', addProduct)
 
-// Delete an item from the shopping cart
+// to delete a product from the shopping cart
 router.delete('/:id', (req, res) => {
     res.json({ mssg: 'Delete an item from the shopping cart' })
 })
 
-// To update an item in the shopping cart (change the quantity)
+// to update a product in the shopping cart (change the quantity)
 router.patch('/:id', (req, res) => {
     res.json({ mssg: 'Update an item in the shopping cart' })
 })
-
-
 
 
 
