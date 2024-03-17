@@ -1,23 +1,17 @@
 const express = require('express');
 const {
-    getStoreProducts,
-    getProduct,
-    addProduct,
-} = require('../controllers/productController')
+    getAllStoreProducts,
+    getStoreProduct,
+} = require('../controllers/storeProductController')
 
 const router = express.Router();
 
-/////////// inside a main store component ///////////
-
-
+/////////// Main store component products ///////////
 // to get all the products from the shop
-router.get('/', getStoreProducts)
+router.get('/', getAllStoreProducts)
 
 // to get a single product
-router.get('/:id', getProduct)
-
-// to add a product into the shopping cart
-router.post('/', addProduct)
+router.get('/:id', getStoreProduct)
 
 
 module.exports = router

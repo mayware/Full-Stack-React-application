@@ -21,8 +21,6 @@ app.use('/api/shop/store', storeRoutes);
 app.use('/api/shop/cart', cartRoutes);
 
 
-
-
 // connect to the database
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {

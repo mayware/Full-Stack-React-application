@@ -29,4 +29,6 @@ const productsSchema = new Schema({
     }
 }, { timestamps: true })
 
+
+// creates a collection in a database named 'products' pluralizing from the name 'Product'
 module.exports = mongoose.model('Product', productsSchema)
