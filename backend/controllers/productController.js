@@ -1,11 +1,14 @@
 const Product = require('../models/productModel');
 const mongoose = require('mongoose');
 
-// get all products
-const getCartProducts = async (req, res) => {
+/////////// Main store ///////////
+
+// get all the products in the main store
+const getStoreProducts = async (req, res) => {
     const products = await Product.find({}).sort({ createdAt: -1 })
     res.status(200).json(products)
 }
+
 // get a single product
 const getProduct = async (req, res) => {
     const { id } = req.params; // gets the product's id from the URL
@@ -23,7 +26,6 @@ const getProduct = async (req, res) => {
 }
 
 // add a product to a shopping cart
-
 const addProduct = async (req, res) => {
     const { title, price, description, rating, quantity, image } = req.body
 
@@ -36,8 +38,18 @@ const addProduct = async (req, res) => {
     }
 }
 
-// delete a product from the shopping cart
 
+
+
+/////////// Shopping cart ///////////
+
+// get all products in the shopping cart
+const getCartProducts = async (req, res) => {
+    const products = await Product.find({}).sort({ createdAt: -1 })
+    res.status(200).json(products)
+}
+
+// delete a product from the shopping cart
 const deleteProduct = async (req, res) => {
     const { id } = req.params;
 
@@ -54,8 +66,7 @@ const deleteProduct = async (req, res) => {
     res.status(200).json(product);
 }
 
-// update a product
-
+// update a product in a shopping cart
 const updateProduct = async (req, res) => {
     const { id } = req.params;
 
@@ -76,6 +87,7 @@ const updateProduct = async (req, res) => {
 
 module.exports = {
     getCartProducts,
+    getStoreProducts,
     getProduct,
     addProduct,
     deleteProduct,
