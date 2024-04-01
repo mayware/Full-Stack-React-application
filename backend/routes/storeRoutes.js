@@ -6,7 +6,7 @@ const {
 
 const router = express.Router();
 
-/////////// Main store component products ///////////
+
 // to get all the products from the shop
 router.get('/', getAllStoreProducts)
 

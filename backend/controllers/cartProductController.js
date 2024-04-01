@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const addProduct = async (req, res) => {
     const { title, price, quantity, image } = req.body
 
-    // adding a product document to db to display in the cart
     try {
         const product = await CartProduct.create({ title, price, quantity, image })
         res.status(200).json(product)
@@ -28,8 +27,9 @@ const deleteProduct = async (req, res) => {
     if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(404).json({ error: "No such product" })
     }
+
     const product = await CartProduct.findOneAndDelete({ _id: id })
-    // checks whether the id property of the document is equal to a url param id
+    // checks whether the id property of the document is equal to a params
 
     if (!product) {
         return res.status(404).json({ error: "No such product" })

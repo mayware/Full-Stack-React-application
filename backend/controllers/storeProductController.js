@@ -1,8 +1,6 @@
 const Product = require('../models/productModel');
 const mongoose = require('mongoose');
 
-/////////// Main store ///////////
-
 // get all the products in the main store
 const getAllStoreProducts = async (req, res) => {
     const products = await Product.find({}).sort({ createdAt: -1 })

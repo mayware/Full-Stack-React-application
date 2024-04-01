@@ -9,8 +9,8 @@ const {
 
 const router = express.Router();
 
-/////////// Inside a shopping cart component ///////////
-
+// to add a product into the shopping cart
+router.post('/', addProduct)
 
 // to get cart products
 router.get('/', getCartProducts)
@@ -18,11 +18,8 @@ router.get('/', getCartProducts)
 // to delete a product from the shopping cart
 router.delete('/:id', deleteProduct)
 
-// to update a product in the shopping cart (change the quantity)
+// OPTIONAL: to update a product in the shopping cart (change the quantity)
 router.patch('/:id', updateProduct)
-
-// to add a product into the shopping cart
-router.post('/', addProduct)
 
 
 module.exports = router
