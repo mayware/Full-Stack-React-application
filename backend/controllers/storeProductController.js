@@ -1,6 +1,17 @@
 const Product = require('../models/productModel');
 const mongoose = require('mongoose');
 
+const addProductToDb = async (req, res) => {
+    const { title, price, category, rating, weight, quantity, description, image } = req.body
+
+    try {
+        const product = await Product.create({ title, price, category, rating, weight, quantity, description, image })
+        res.status(200).json(product)
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+}
+
 // get all the products in the main store
 const getAllStoreProducts = async (req, res) => {
     const products = await Product.find({}).sort({ createdAt: -1 })
@@ -27,4 +38,5 @@ const getStoreProduct = async (req, res) => {
 module.exports = {
     getAllStoreProducts,
     getStoreProduct,
+    addProductToDb
 }

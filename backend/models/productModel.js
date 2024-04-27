@@ -11,10 +11,6 @@ const productsSchema = new Schema({
         type: String,
         required: true
     },
-    description: {
-        type: String,
-        required: true
-    },
     category: {
         type: String,
         required: true
@@ -23,8 +19,16 @@ const productsSchema = new Schema({
         type: Number,
         required: true
     },
+    weight: {
+        type: String,
+        required: true
+    },
     quantity: {
         type: Number,
+        required: true
+    },
+    description: {
+        type: String,
         required: true
     },
     image: {
