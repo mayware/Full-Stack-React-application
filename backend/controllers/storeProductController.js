@@ -1,12 +1,14 @@
 const Product = require('../models/productModel');
 const mongoose = require('mongoose');
 
+// to add new products to the store
 const addProductToDb = async (req, res) => {
-    const { title, price, category, rating, weight, quantity, description, image } = req.body
+    // const { title, price, category, rating, weight, quantity, description, image } = req.body
+    const products = req.body;
 
     try {
-        const product = await Product.create({ title, price, category, rating, weight, quantity, description, image })
-        res.status(200).json(product)
+        const insertedProducts = await Product.insertMany(products);
+        res.status(200).json(insertedProducts);
     } catch (error) {
         res.status(400).json({ error: error.message })
     }
