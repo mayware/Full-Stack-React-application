@@ -14,7 +14,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #4a4e69;
+  background: #ffffff;
 }
 
 :root {
@@ -22,18 +22,17 @@ body {
   --error: #e7195a;
 }
 
-/* Components */
 
 header .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 6rem;
+  height: 4rem;
   width: 100%;
   top: 0;
   margin-bottom: 1rem;
   padding: 0 1rem 0 1rem;
-  background: #004e98;
+  background: #0f4c5c;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 }
 
@@ -51,36 +50,54 @@ header a {
   margin-left: 1rem;
 }
 
+.content-wrapper {
+  position: relative;
+  min-height: 100vh;
+  max-width: 65rem;
+  margin: 0 auto;
+  border: 1px solid #000;
+  background: #748cab;
+}
+
+.content-wrapper-inner {}
+
+.category-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  background: #1d2d44;
+  color: #f1f1f1;
+}
+
+.home-page {}
+
+.pagination-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: #1d2d44;
+  color: #f1f1f1;
+}
+
+
 .footer {
   display: flex;
   align-items: center;
   justify-content: center;
   bottom: 0;
-  height: 10rem;
+  height: 5rem;
   width: 100%;
   padding: 0 1.5rem 0 1.5rem;
   margin-top: 1rem;
   z-index: 1000;
   color: #ffffff;
-  background: #1B2430;
+  background: #00509d;
 }
-
-/* Components */
-
-
-/* Pages */
-
-.pages {
-  min-height: 100vh;
-  max-width: 85rem;
-  padding: 1rem;
-  margin: 0 auto;
-  border: 4px solid #000;
-  background: #f1f1f1;
-}
-
-.home-page {
-  border: 1px solid #000;
-}
-
-/* Pages */

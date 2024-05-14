@@ -3,9 +3,7 @@ const mongoose = require('mongoose');
 
 // to add new products to the store
 const addProductToDb = async (req, res) => {
-    // const { title, price, category, rating, weight, quantity, description, image } = req.body
     const products = req.body;
-
     try {
         const insertedProducts = await Product.insertMany(products);
         res.status(200).json(insertedProducts);
