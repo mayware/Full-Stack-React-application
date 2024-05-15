@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import HeaderBar from './components/HeaderBar';
 import Header from './components/Header';
 import CategoryBar from './components/CategoryBar';
 import PaginationBar from './components/PaginationBar';
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <HeaderBar />
         <Header />
         <div className="content-wrapper">
           <CategoryBar />

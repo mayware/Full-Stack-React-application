@@ -22,17 +22,31 @@ body {
   --error: #e7195a;
 }
 
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 2rem;
+  padding-right: 1.5rem;
+  background: #003f88;
+  border-bottom: 1px solid #000;
+}
+
+.header-bar a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
 
 header .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 4rem;
+  justify-content: center;
+  height: 3.5rem;
   width: 100%;
   top: 0;
   margin-bottom: 1rem;
   padding: 0 1rem 0 1rem;
-  background: #0f4c5c;
+  background: #1d2d44;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 }
 
@@ -41,7 +55,7 @@ header a {
   color: #f1f1f1;
 }
 
-.header-right {
+.header-bar-right {
   display: flex;
   align-items: center;
 }
@@ -55,8 +69,8 @@ header a {
   min-height: 100vh;
   max-width: 65rem;
   margin: 0 auto;
-  border: 1px solid #000;
-  background: #748cab;
+  border: 2px solid #6c757d;
+  background: #e9ecef;
 }
 
 .content-wrapper-inner {}
@@ -67,7 +81,7 @@ header a {
   justify-content: center;
   width: 100%;
   padding: 1rem;
-  background: #1d2d44;
+  background: #0f4c5c;
   color: #f1f1f1;
 }
 
@@ -83,7 +97,7 @@ header a {
   left: 0;
   width: 100%;
   padding: 1rem;
-  background: #1d2d44;
+  background: #0f4c5c;
   color: #f1f1f1;
 }
 
@@ -99,5 +113,5 @@ header a {
   margin-top: 1rem;
   z-index: 1000;
   color: #ffffff;
-  background: #00509d;
+  background: #1d2d44;
 }
