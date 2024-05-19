@@ -20,7 +20,16 @@ const Home = () => {
         <div className="home-page">
             <div className="store-products">
                 {products && products.map((product) => (
-                    <p key={product._id}>{product.title}</p>
+                    <div className="product-card">
+                        <div className="product-card-inner">
+                            <div className="product-image-box">
+                                <img src={product.image} />
+                            </div>
+                            <div className="product-detail-box">
+                                <p key={product._id}>{product.title}</p>
+                            </div>
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>
