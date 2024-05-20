@@ -25,11 +25,10 @@ body {
 .header-bar {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  height: 2rem;
-  padding-right: 1.5rem;
-  background: #003f88;
-  border-bottom: 1px solid #000;
+  justify-content: space-between;
+  height: 3.5rem;
+  padding: 0 1.5rem 0 1.5rem;
+  background: #041C32;
 }
 
 .header-bar a {
@@ -41,12 +40,11 @@ header .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3.5rem;
+  height: 2rem;
   width: 100%;
   top: 0;
-  margin-bottom: 1rem;
   padding: 0 1rem 0 1rem;
-  background: #1d2d44;
+  background: #064663;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 }
 
@@ -66,21 +64,8 @@ header a {
 
 .content-wrapper {
   min-height: 100vh;
-  max-width: 80rem;
+  max-width: 75rem;
   margin: 0 auto;
-  background: #e9ecef;
-}
-
-.content-wrapper-inner {}
-
-.category-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 1rem;
-  background: #0f4c5c;
-  color: #f1f1f1;
 }
 
 .home-page {
@@ -90,8 +75,11 @@ header a {
 .store-products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 2.5rem 1rem 2.5rem 1rem;
   border: 1px solid #778da9;
   justify-items: center;
+  background: #DDE6ED;
 }
 
 .product-card {
@@ -99,18 +87,14 @@ header a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-height: 20rem;
-  min-height: 20rem;
+  max-height: 24rem;
+  min-height: 24rem;
   max-width: 17rem;
   min-width: 17rem;
-  margin: 0.4rem;
   padding: .5rem;
-  border: 1px solid #000;
-  background: #f1f1f1;
-}
-
-.product-image-box {
-  /* border: 1px solid #000; */
+  border: 1px solid #9DB2BF;
+  border-radius: 0.3rem;
+  background: #ffffff;
 }
 
 .product-image-box img {
@@ -118,12 +102,11 @@ header a {
   min-height: 15rem;
   max-width: 15rem;
   min-width: 15rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .product-detail-box {
   width: 100%;
-  border: 1px solid #000;
 }
 
 .pagination-bar {
@@ -132,10 +115,10 @@ header a {
   justify-content: center;
   width: 100%;
   padding: 1rem;
-  background: #0f4c5c;
-  color: #f1f1f1;
+  margin-top: 1rem;
+  border: 1px solid #000;
+  color: #000;
 }
-
 
 .footer {
   display: flex;

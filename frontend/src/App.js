@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import HeaderBar from './components/HeaderBar';
 import Header from './components/Header';
-import CategoryBar from './components/CategoryBar';
 import PaginationBar from './components/PaginationBar';
 import Footer from './components/Footer';
 import Item from './pages/Item';
@@ -14,7 +13,6 @@ function App() {
         <HeaderBar />
         <Header />
         <div className="content-wrapper">
-          <CategoryBar />
           <div className="content-wrapper-inner">
             <Routes>
               <Route
