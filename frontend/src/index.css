@@ -2,19 +2,16 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
+  height: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Roboto', sans-serif;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
 }
 
 :root {
@@ -62,16 +59,24 @@ header a {
   margin-left: 1rem;
 }
 
-.sidenav {
-  width: 24rem;
-  border: 1px solid #000;
-}
-
 .wrapper {
   display: flex;
-  align-items: center;
-  min-height: 100vh;
+  height: 100%;
   margin: 0 auto;
+  background: #DDE6ED;
+}
+
+.sidenav-product-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.sidenav {
+  height: 100%;
+  width: 100%;
+  border-right: 1px solid #000;
 }
 
 .product-list-pagination {
@@ -80,8 +85,6 @@ header a {
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 75rem;
-  border: 1px solid #000;
 }
 
 .store-products {
@@ -89,19 +92,8 @@ header a {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   padding: 2.5rem 1rem 2.5rem 1rem;
-  border: 1px solid #778da9;
   justify-items: center;
-  background: #DDE6ED;
-}
-
-.products-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 1rem;
-  margin-top: 1rem;
-  border: 1px solid #000;
+  width: 95rem;
 }
 
 .product-card {
@@ -114,7 +106,7 @@ header a {
   max-width: 17rem;
   min-width: 17rem;
   padding: .5rem;
-  border: 1px solid #9DB2BF;
+  border: 1px solid #778da9;
   border-radius: 0.3rem;
   background: #ffffff;
 }
@@ -131,6 +123,15 @@ header a {
   width: 100%;
 }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #000;
+}
+
 .pagination-bar {
   color: #000;
 }
@@ -143,7 +144,6 @@ header a {
   height: 5rem;
   width: 100%;
   padding: 0 1.5rem 0 1.5rem;
-  margin-top: 1rem;
   z-index: 1000;
   color: #ffffff;
   background: #1d2d44;

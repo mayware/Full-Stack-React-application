@@ -29,7 +29,7 @@ function App() {
                   />
                 </Routes>
               </div>
-              <div className="products-pagination">
+              <div className="pagination">
                 <PaginationBar />
               </div>
             </div>
